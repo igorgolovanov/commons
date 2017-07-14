@@ -4,10 +4,10 @@
   "description": "",
   "scripts": {
     "acceptance": "mocha --opts ../../test/mocha.opts 'test/acceptance/**/*.ts'",
-    "build": "npm run build:lib && npm run build:lib6",
+    "build": "npm run build:lib-es2015 && npm run build:lib-es2017",
     "build:current": "node ../../bin/compile-package",
-    "build:lib": "node ../../bin/compile-package es2017",
-    "build:lib6": "node ../../bin/compile-package es2015",
+    "build:lib-es2017": "node ../../bin/compile-package es2017",
+    "build:lib-es2015": "node ../../bin/compile-package es2015",
     "clean": "rm -rf commons-log*.tgz lib* package",
     "integration": "mocha --opts ../../test/mocha.opts 'test/integration/**/*.ts'",
     "prepublish": "npm run build",
@@ -22,6 +22,12 @@
     "Commons",
     "Log",
     "Logger"
+  ],
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "lib"
   ],
   "repository": {
     "type": "git",
